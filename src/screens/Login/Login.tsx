@@ -1,5 +1,7 @@
 import React from "react";
 import { SafeAreaView } from "react-native";
+import { ButtonSocialGoogle } from "../../components/ButtonSocialGoogle/ButtonSocialGoogle";
+import { ButtonSocialFacebook } from "@src/components/ButtonSocialFacebook/ButtonSocialFacebook";
 
 import {
     Container,
@@ -10,27 +12,36 @@ import {
     Description,
     ViewButton,
 } from "./styles";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 const Login: React.FC = () => {
     return (
-        <SafeAreaView>
-            <Container>
-                <ContentHeader>
-                    <Title>
-                        {" "}
-                        Seja bem vindo(a) {"\n"} à sua carteira digital
-                    </Title>
+        <GestureHandlerRootView>
+            <SafeAreaView>
+                <Container>
+                    <ContentHeader>
+                        <Title>
+                            {" "}
+                            Seja bem vindo(a) {"\n"} à sua carteira digital
+                        </Title>
 
-                    <Description>Faça login com</Description>
+                        <Description>Faça login com:</Description>
 
-                    <ViewButton></ViewButton>
-                </ContentHeader>
+                        <ViewButton>
+                            <ButtonSocialGoogle title="Google" />
+                            <ButtonSocialFacebook
+                                iconName="facebook"
+                                title="Facebook"
+                            />
+                        </ViewButton>
+                    </ContentHeader>
 
-                <ContentBody></ContentBody>
+                    <ContentBody></ContentBody>
 
-                <ContentFooter></ContentFooter>
-            </Container>
-        </SafeAreaView>
+                    <ContentFooter></ContentFooter>
+                </Container>
+            </SafeAreaView>
+        </GestureHandlerRootView>
     );
 };
 

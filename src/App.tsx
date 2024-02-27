@@ -3,6 +3,7 @@ import { StatusBar } from "expo-status-bar";
 import AppLoading from "expo-app-loading";
 import { View, Text } from "react-native";
 import { ThemeProvider } from "styled-components/native";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 import {
     useFonts,
@@ -35,12 +36,18 @@ const App: React.FC = () => {
         return <AppLoading />;
     }
     return (
-        <ThemeProvider theme={COLORS}>
-            <StatusBar style="dark" translucent backgroundColor="transparent" />
-            <View>
-                <Login />
-            </View>
-        </ThemeProvider>
+        <GestureHandlerRootView>
+            <ThemeProvider theme={COLORS}>
+                <StatusBar
+                    style="dark"
+                    translucent
+                    backgroundColor="transparent"
+                />
+                <View>
+                    <Login />
+                </View>
+            </ThemeProvider>
+        </GestureHandlerRootView>
     );
 };
 

@@ -1,5 +1,7 @@
 import React from "react";
 import { SafeAreaView } from "react-native";
+
+import { Input } from ".././../components/Input/Input";
 import { ButtonSocialGoogle } from "../../components/ButtonSocialGoogle/ButtonSocialGoogle";
 import { ButtonSocialFacebook } from "@src/components/ButtonSocialFacebook/ButtonSocialFacebook";
 
@@ -12,6 +14,7 @@ import {
     Description,
     ViewButton,
 } from "./styles";
+
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 const Login: React.FC = () => {
@@ -36,7 +39,9 @@ const Login: React.FC = () => {
                         </ViewButton>
                     </ContentHeader>
 
-                    <ContentBody></ContentBody>
+                    <ContentBody>
+                        <Input name="email" iconName="mail" />
+                    </ContentBody>
 
                     <ContentFooter></ContentFooter>
                 </Container>

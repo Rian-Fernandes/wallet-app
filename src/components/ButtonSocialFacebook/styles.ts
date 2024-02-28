@@ -1,4 +1,4 @@
-import styled from "styled-components/native";
+import styled, { css } from "styled-components/native";
 import { Fontisto } from "@expo/vector-icons";
 import { RectButton } from "react-native-gesture-handler";
 import { RFValue } from "react-native-responsive-fontsize";
@@ -17,8 +17,10 @@ export const Button = styled(RectButton)`
 `;
 
 export const IconFacebook = styled(Fontisto)`
-    font-size: ${RFValue(25)}px;
-    color: ${({ theme }) => theme.COLORS.WHITE};
+    ${({ theme }) => css`
+        font-size: ${RFValue(25)}px;
+        color: ${theme.COLORS.WHITE};
+    `}
 `;
 
 export const Title = styled.Text`

@@ -1,65 +1,38 @@
-import React, {
-    forwardRef,
-    useCallback,
-    useState,
-    useImperativeHandle,
-    useRef,
-    useEffect,
-} from "react";
-
+import React from "react";
+import { MaterialIcons } from "@expo/vector-icons";
+import { Container, InputContainer } from "./styles";
 import { useTheme } from "styled-components";
-import { useField } from "@unform/core";
-import { Ionicons } from "@expo/vector-icons";
-import { Container, IConContainer, InputText } from "./styles";
-import { Text, TextInputProps } from "react-native";
 
-interface InputRef {
-    focus: () => void;
+interface InputProps {
+    rightIcon?: boolean;
+    leftIcon?: boolean;
 }
 
-interface InputProps extends TextInputProps {
-    name: string;
-    value?: string;
-    iconName?: React.ComponentProps<typeof Ionicons>["name"];
-    containerStyle?: { [key: string]: string | number };
-}
-
-const Input: React.ForwardRefRenderFunction<InputRef, InputProps> = (
-    { iconName, name, value, containerStyle, ...rest },
-    ref
-) => {
-    const theme = useTheme();
-
-    const [hasError, setHasError] = useState(false);
-    const [isFocused, setIsFocused] = useState(false);
-    const [isFilled, setIsFilled] = useState(false);
+const Input: React.FC<InputProps> = ({ rightIcon, leftIcon }) => {
+    const { COLORS } = useTheme();
 
     return (
         <Container>
-            <IConContainer
-                isFilled={isFilled}
-                hasError={hasError}
-                isFocused={isFocused}
-            >
-                <Ionicons
-                    name={iconName}
-                    size={25}
-                    color={
-                        isFocused || hasError || isFilled
-                            ? theme.COLORS.BLUE1
-                            : theme.COLORS.GRAY1
-                    }
+            {leftIcon && (
+                <MaterialIcons
+                    name="mail-outline"
+                    size={20}
+                    color={COLORS.TEXTDARK}
+                    style={{ padding: 5, marginLeft: 10 }}
                 />
-            </IConContainer>
+            )}
 
-            <InputText
-                isFilled={isFilled}
-                hasError={hasError}
-                isFocused={isFocused}
-                placeholderTextColor={theme.COLORS.GRAY1}
-            />
+            <InputContainer />
+            {rightIcon && (
+                <MaterialIcons
+                    name="remove-red-eye"
+                    size={20}
+                    color={COLORS.TEXTDARK}
+                    style={{ padding: 5, marginRight: 10 }}
+                />
+            )}
         </Container>
     );
 };
 
-export { Input };
+export default Input;

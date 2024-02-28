@@ -1,7 +1,8 @@
 import React from "react";
 import { SafeAreaView } from "react-native";
 
-import { Input } from ".././../components/Input/Input";
+import Input from "../../components/Input/Input";
+
 import { ButtonSocialGoogle } from "../../components/ButtonSocialGoogle/ButtonSocialGoogle";
 import { ButtonSocialFacebook } from "@src/components/ButtonSocialFacebook/ButtonSocialFacebook";
 
@@ -40,7 +41,8 @@ const Login: React.FC = () => {
                     </ContentHeader>
 
                     <ContentBody>
-                        <Input name="email" iconName="mail" />
+                        <Input leftIcon />
+                        <Input rightIcon />
                     </ContentBody>
 
                     <ContentFooter></ContentFooter>

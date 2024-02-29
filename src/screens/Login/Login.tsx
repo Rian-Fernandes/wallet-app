@@ -1,8 +1,8 @@
 import React from "react";
 import { SafeAreaView } from "react-native";
-
+import { useTheme } from "styled-components";
 import Input from "../../components/Input/Input";
-
+import { Button } from "../../components/Button/Button";
 import { ButtonSocialGoogle } from "../../components/ButtonSocialGoogle/ButtonSocialGoogle";
 import { ButtonSocialFacebook } from "@src/components/ButtonSocialFacebook/ButtonSocialFacebook";
 
@@ -19,6 +19,8 @@ import {
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 const Login: React.FC = () => {
+    const { COLORS } = useTheme();
+
     return (
         <GestureHandlerRootView>
             <SafeAreaView>
@@ -41,8 +43,20 @@ const Login: React.FC = () => {
                     </ContentHeader>
 
                     <ContentBody>
-                        <Input leftIcon />
-                        <Input rightIcon />
+                        <Input
+                            leftIcon
+                            iconSize={25}
+                            iconName="mail-outline"
+                            iconColor={COLORS.TEXTDARK}
+                            placeholder="Digite seu e-mail"
+                        />
+                        <Input
+                            leftIcon
+                            iconName="remove-red-eye"
+                            iconSize={25}
+                            placeholder="Digite sua senha"
+                        />
+                        <Button title="Entrar" onPress={() => {}} />
                     </ContentBody>
 
                     <ContentFooter></ContentFooter>

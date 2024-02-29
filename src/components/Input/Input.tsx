@@ -2,33 +2,44 @@ import React from "react";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Container, InputContainer } from "./styles";
 import { useTheme } from "styled-components";
+import { TextInputProps } from "react-native";
 
 interface InputProps {
     rightIcon?: boolean;
     leftIcon?: boolean;
+    iconName?: string;
+    iconSize?: number;
+    iconColor?: string;
 }
 
-const Input: React.FC<InputProps> = ({ rightIcon, leftIcon }) => {
+const Input: React.FC<InputProps & TextInputProps> = ({
+    rightIcon,
+    leftIcon,
+    iconName,
+    iconSize,
+    iconColor,
+    ...rest
+}) => {
     const { COLORS } = useTheme();
 
     return (
         <Container>
             {leftIcon && (
                 <MaterialIcons
-                    name="mail-outline"
-                    size={20}
-                    color={COLORS.TEXTDARK}
-                    style={{ padding: 5, marginLeft: 10 }}
+                    name={iconName}
+                    size={iconSize}
+                    color={iconColor || COLORS.TEXTDARK}
+                    style={{ padding: 5 }}
                 />
             )}
 
-            <InputContainer />
+            <InputContainer {...rest} placeholderTextColor={COLORS.GRAY3} />
             {rightIcon && (
                 <MaterialIcons
-                    name="remove-red-eye"
-                    size={20}
-                    color={COLORS.TEXTDARK}
-                    style={{ padding: 5, marginRight: 10 }}
+                    name={iconName}
+                    size={iconSize}
+                    color={iconColor || COLORS.TEXTDARK}
+                    style={{ padding: 5, marginRight: 5 }}
                 />
             )}
         </Container>

@@ -41,7 +41,7 @@ const Input: React.FC<InputProps & TextInputProps> = ({
                 {...rest}
                 secureTextEntry={secury}
                 underLineColorAndroid="transparent"
-                placeholderTextColor={COLORS.GRAY3}
+                placeholderTextColor={COLORS.GRAY2}
             />
 
             {rightIcon && (
@@ -49,7 +49,7 @@ const Input: React.FC<InputProps & TextInputProps> = ({
                     <Ionicons
                         name={secury ? "eye-off" : "eye"}
                         size={iconSize}
-                        color={iconColor || COLORS.TEXTDARK}
+                        color={iconColor || COLORS.GRAY2}
                         style={{ padding: 5, marginRight: 5 }}
                     />
                 </TouchableOpacity>

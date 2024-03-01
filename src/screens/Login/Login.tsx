@@ -47,16 +47,24 @@ const Login: React.FC = () => {
                             leftIcon
                             iconSize={25}
                             iconName="mail-outline"
+                            secureTextEntry={false}
                             iconColor={COLORS.TEXTDARK}
                             placeholder="Digite seu e-mail"
                         />
                         <Input
                             leftIcon
-                            iconName="remove-red-eye"
+                            rightIcon
                             iconSize={25}
+                            iconName="password"
                             placeholder="Digite sua senha"
+                            secureTextEntry
                         />
-                        <Button title="Entrar" onPress={() => {}} />
+                        <Button
+                            title="Entrar"
+                            variant="primary"
+                            onPress={() => {}}
+                            style={{ marginBottom: 20 }}
+                        />
                     </ContentBody>
 
                     <ContentFooter></ContentFooter>

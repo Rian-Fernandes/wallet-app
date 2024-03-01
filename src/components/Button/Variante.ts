@@ -1,6 +1,6 @@
-import { useTheme } from "styled-components";
+import theme from "@src/styles/theme";
 
-const { COLORS } = useTheme();
+theme.COLORS;
 
 interface ButtonStyle {
     button: {
@@ -25,24 +25,24 @@ export interface ButtonVariant {
 const buttonPrimary: ButtonVariant = {
     enabled: {
         button: {
-            backgroundColor: COLORS.PURPLE1,
+            backgroundColor: theme.COLORS.PURPLE1,
         },
         title: {
-            color: COLORS.WHITE_100,
+            color: theme.COLORS.WHITE_100,
         },
         icon: {
-            color: COLORS.WHITE_100,
+            color: theme.COLORS.WHITE_100,
         },
     },
     desabled: {
         button: {
-            backgroundColor: COLORS.GRAY3,
+            backgroundColor: theme.COLORS.GRAY3,
         },
         title: {
-            color: COLORS.WHITE_100,
+            color: theme.COLORS.WHITE_100,
         },
         icon: {
-            color: COLORS.WHITE_100,
+            color: theme.COLORS.WHITE_100,
         },
     },
 };
@@ -52,26 +52,26 @@ const buttonOutLine: ButtonVariant = {
         button: {
             backgroundColor: "transparent",
             borderWidth: 2,
-            borderColor: COLORS.PURPLE1,
+            borderColor: theme.COLORS.PURPLE1,
         },
         title: {
-            color: COLORS.TEXTDARK,
+            color: theme.COLORS.TEXTDARK,
         },
         icon: {
-            color: COLORS.GRAY1,
+            color: theme.COLORS.GRAY1,
         },
     },
     desabled: {
         button: {
             backgroundColor: "transparent",
             borderWidth: 2,
-            borderColor: COLORS.GRAY3,
+            borderColor: theme.COLORS.GRAY3,
         },
         title: {
-            color: COLORS.TEXTDARK,
+            color: theme.COLORS.TEXTDARK,
         },
         icon: {
-            color: COLORS.GRAY1,
+            color: theme.COLORS.GRAY1,
         },
     },
 };
@@ -79,7 +79,7 @@ const buttonOutLine: ButtonVariant = {
 const buttonBlack: ButtonVariant = {
     enabled: {
         button: {
-            backgroundColor: COLORS.BLACK,
+            backgroundColor: theme.COLORS.BLACK,
         },
         title: {
             color: "#FBB605",
@@ -90,13 +90,13 @@ const buttonBlack: ButtonVariant = {
     },
     desabled: {
         button: {
-            backgroundColor: COLORS.GRAY6,
+            backgroundColor: theme.COLORS.GRAY6,
         },
         title: {
-            color: COLORS.WHITE,
+            color: theme.COLORS.WHITE,
         },
         icon: {
-            color: COLORS.WHITE,
+            color: theme.COLORS.WHITE,
         },
     },
 };

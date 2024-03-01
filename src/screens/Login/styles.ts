@@ -17,18 +17,20 @@ export const ContentFooter = styled.View``;
 
 export const ViewButton = styled.View`
     flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
 `;
 
 export const Title = styled.Text`
     margin-top: ${RFValue(40)}px;
     text-align: center;
     font-size: ${RFValue(25)}px;
-    font-family: ${({ theme }) => theme.FONTS.POPPINSMEDIUM};
+    font-family: ${({ theme }: any) => theme.FONTS.POPPINSMEDIUM};
 `;
 
 export const Description = styled.Text`
     margin-top: ${RFValue(60)}px;
     margin-bottom: ${RFValue(10)}px;
     font-size: ${RFValue(15)}px;
-    font-family: ${({ theme }) => theme.FONTS.POPPINSLIGHT};
+    font-family: ${({ theme }: any) => theme.FONTS.POPPINSLIGHT};
 `;

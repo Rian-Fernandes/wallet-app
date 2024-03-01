@@ -2,7 +2,7 @@ import styled from "styled-components/native";
 
 export const Container = styled.View`
     width: 100%;
-    height: 50px;
+    height: 55px;
     padding: 0 12px;
     border-radius: 8px;
     justify-content: center;
@@ -14,7 +14,7 @@ export const Container = styled.View`
 
 export const InputContainer = styled.TextInput`
     width: 100%;
-    height: 45px;
+    height: 50px;
     flex: 1;
     border: 0;
     border-radius: 8px;

@@ -1,0 +1,26 @@
+Explicação do uso de pastas:
+    - @types: Para definições de tipos Typescript personalizadas ou importações de tipos de terceiros;
+    -assets: Onde é possível armazenar rescursos estáticos como imagens, fontes, etc;
+    -components: Componenetes reutilizáveis que podem ser usados em várias partes do aplicativo;
+    -config: Configurações ou variáveis de configuração específica do projeto;
+    -hooks: Hooks personalizados do React;
+    -Routes: Definição de configuração de navegação, como o React Navigations;
+    -screens: Componenetes de tela que representam diferentes telas do aplicativo;
+    -services: Lógica de serviço como as chamadas de API;
+    -styles: Estilos globais ou utilitários para estilização;
+    -util: Funções de utilizade e helper;
+    -App.tsx: O ponto de entrada do app, onde as rotas e componentes principais são geralmente renderizados;
+
+Lembrete a respeito dos arquivos de código:
+    @types:
+        index.d.ts:
+            Ele está responsável para fornecer declarações de tipo para arquivos PNG no projeto.
+            O trecho de código "declare module "*png";", indica que está sendo criado uma declaração de módulos
+            para arquivos PNG. Isso pode ser útil em casos onde está sendo usado módulos que não tem definições de
+            tipos Typescript fornecidos de forma nativa.
+            Sendo assim ,no atual projeto esse trecho permite que o Typescript reconheça e forneça sugestões de código
+            apropriadas quando eu importo ou utilizo algum arquivo PNG no código. Sem essa declaração de tipo, O
+            Typescript pode não entender completamente a estrutura e propriedades desses arquivos e pode não fornecer
+            sugestões adequadas ao decorrer do desenvolvimento. (Eu que o diga);
+
+

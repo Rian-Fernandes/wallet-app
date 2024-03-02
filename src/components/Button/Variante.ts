@@ -1,6 +1,6 @@
 import theme from "@src/styles/theme";
 
-theme.COLORS;
+theme.COLORS; //Apenas acessando a propriedade COLORS do objeto theme.
 
 interface ButtonStyle {
     button: {
@@ -17,10 +17,15 @@ interface ButtonStyle {
     };
 }
 
+//Criando as interfaces de cima e de baixo, permite que eu tenha uma abordagem mais limpa e reutilizavel para definir
+//os estilos e variações dos botoões. Facilita a manutenção.
+
 export interface ButtonVariant {
-    enabled: ButtonStyle;
+    enabled: ButtonStyle; //Criando interface para a variação dos botões e reaproveitando as propriedades de estilo criadas na interface anterior.
     desabled: ButtonStyle;
 }
+
+//Ao definir variações mais especificas para diferentes estilos de botão, me facilita não só a manutenção, mas também a compreensão do código. Caso haja necessidade de ajustar a cor ou um estilo especifico futuramente isso pode ser feito de maneira fácil e agil.
 
 const buttonPrimary: ButtonVariant = {
     enabled: {
@@ -101,6 +106,7 @@ const buttonBlack: ButtonVariant = {
     },
 };
 
+//Estou exportando um objeto pois ele contém todas as variações que eu necessito, é mais prático, e limpo fazer dessa maneira além de também facilitar uma futura manutenção.
 export const variants = {
     primary: buttonPrimary,
     outline: buttonOutLine,

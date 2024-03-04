@@ -4,6 +4,8 @@ import { Pressable } from "react-native";
 
 export const Container = styled.View`
     padding: ${RFValue(20)}px;
+    background-color: #d9efe8;
+    height: 100%;
 `;
 
 export const ContentHeader = styled.View`
@@ -38,10 +40,10 @@ export const Description = styled.Text`
 export const ContentFooter = styled.View`
     align-items: center;
     justify-content: center;
-    position: absolute;
+    /* position: absolute;
     left: 0;
     right: 0;
-    bottom: 5px;
+    bottom: 5px; */
 `;
 
 export const ButtonSignUp = styled(Pressable)`

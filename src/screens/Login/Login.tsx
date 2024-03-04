@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView } from "react-native";
+import { KeyboardAvoidingView, Platform } from "react-native";
 import { useTheme } from "styled-components";
 import Input from "../../components/Input/Input";
 import { Button } from "../../components/Button/Button";
@@ -22,82 +22,81 @@ import {
     ContenTitleForgotPassword,
 } from "./styles";
 
-import { GestureHandlerRootView } from "react-native-gesture-handler";
-
 const Login: React.FC = () => {
     const { COLORS } = useTheme();
 
     return (
-        <GestureHandlerRootView>
-            <SafeAreaView>
-                <Container>
-                    <ContentHeader>
-                        <Title>
-                            {" "}
-                            Seja bem vindo(a) {"\n"} à sua carteira digital
-                        </Title>
+        <KeyboardAvoidingView
+            behavior={Platform.OS === "ios" ? "padding" : "position"}
+            enabled
+        >
+            <Container>
+                <ContentHeader>
+                    <Title>
+                        {" "}
+                        Seja bem vindo(a) {"\n"} à sua carteira digital
+                    </Title>
 
-                        <Description>Faça login com:</Description>
+                    <Description>Faça login com:</Description>
 
-                        <ViewButton>
-                            <ButtonSocialGoogle title="Google" />
-                            <ButtonSocialFacebook
-                                iconName="facebook"
-                                title="Facebook"
-                            />
-                        </ViewButton>
-                    </ContentHeader>
-
-                    <ContentBody>
-                        <Input
-                            leftIcon
-                            iconSize={25}
-                            iconName="mail-outline"
-                            secureTextEntry={false}
-                            autoCorrect={false}
-                            iconColor={COLORS.GRAY4}
-                            autoCapitalize="none"
-                            keyboardType="email-address"
-                            placeholder="Digite seu e-mail"
+                    <ViewButton>
+                        <ButtonSocialGoogle title="Google" />
+                        <ButtonSocialFacebook
+                            iconName="facebook"
+                            title="Facebook"
                         />
-                        <Input
-                            leftIcon
-                            rightIcon
-                            iconSize={25}
-                            iconName="password"
-                            autoCorrect={false}
-                            autoCapitalize="none"
-                            keyboardType="default"
-                            placeholder="Digite sua senha"
-                            secureTextEntry
-                        />
+                    </ViewButton>
+                </ContentHeader>
 
-                        <ContentForgotPassword>
-                            <ContenButtonForgotPassword onPress={() => {}}>
-                                <ContenTitleForgotPassword>
-                                    Esqueceu sua senha?
-                                </ContenTitleForgotPassword>
-                            </ContenButtonForgotPassword>
-                        </ContentForgotPassword>
-                        <Button
-                            title="Entrar"
-                            variant="primary"
-                            onPress={() => {}}
-                            style={{ marginBottom: 20 }}
-                        />
-                    </ContentBody>
+                <ContentBody>
+                    <Input
+                        leftIcon
+                        iconSize={25}
+                        iconName="mail-outline"
+                        secureTextEntry={false}
+                        autoCorrect={false}
+                        iconColor={COLORS.GRAY4}
+                        autoCapitalize="none"
+                        keyboardType="email-address"
+                        placeholder="Digite seu e-mail"
+                    />
+                    <Input
+                        leftIcon
+                        rightIcon
+                        iconSize={25}
+                        iconName="password"
+                        autoCorrect={false}
+                        autoCapitalize="none"
+                        keyboardType="default"
+                        placeholder="Digite sua senha"
+                        secureTextEntry
+                    />
 
-                    <ContentFooter>
-                        <ButtonSignUp onPress={() => {}}>
-                            <TitleButtonSignUp>
-                                Não tem cadastro ainda?{" "}
-                            </TitleButtonSignUp>
-                            <TitleButtonSignup2>Cadastre-se</TitleButtonSignup2>
-                        </ButtonSignUp>
-                    </ContentFooter>
-                </Container>
-            </SafeAreaView>
-        </GestureHandlerRootView>
+                    <ContentForgotPassword>
+                        <ContenButtonForgotPassword onPress={() => {}}>
+                            <ContenTitleForgotPassword>
+                                Esqueceu sua senha?
+                            </ContenTitleForgotPassword>
+                        </ContenButtonForgotPassword>
+                    </ContentForgotPassword>
+                    <Button
+                        title="Entrar"
+                        variant="primary"
+                        onPress={() => {}}
+                        style={{ marginBottom: 20 }}
+                    />
+                </ContentBody>
+
+                <ContentFooter>
+                    <ButtonSignUp onPress={() => {}}>
+                        <TitleButtonSignUp>
+                            Não tem cadastro ainda?{" "}
+                        </TitleButtonSignUp>
+                        <TitleButtonSignup2>Cadastre-se</TitleButtonSignup2>
+                    </ButtonSignUp>
+                </ContentFooter>
+            </Container>
+        </KeyboardAvoidingView>
     );
 };
 

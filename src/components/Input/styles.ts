@@ -9,7 +9,7 @@ export const Container = styled.View`
     margin-top: 10px;
     align-items: center;
     flex-direction: row;
-    background-color: ${({ theme }: any) => theme.COLORS.GRAY5};
+    background-color: ${({ theme }: any) => theme.COLORS.GRAY0};
 `;
 
 export const InputContainer = styled.TextInput`

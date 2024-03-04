@@ -4,14 +4,13 @@ import { ActivityIndicator, TouchableOpacityProps } from "react-native";
 import { useTheme } from "styled-components";
 import { variants } from "./Variante";
 import { Container, Title, Content } from "./styles";
-
 interface IButtonProps {
     title: string; //Define que o title seja uma string. Será usado para o texto do botão.
     onPress: () => void; //OnPress é uma função que não recebe argumentos nem retorna nada. Será chamada quando o botão for pressionado.
     iconName?: keyof typeof AntDesign.glyphMap; //Definindo que o iconName seja opcional, e pode ser uma chave válida do tipo "AntDesign.glypMap". Isso permite que eu forneça um nome de ícone para ser exibido no botão.
     isLoading?: boolean; //Definindo que a propriedade isLoading é opcional, e deve ser do tipo booleano. Indica se o botão está em tempo de carregamento.
     disable?: boolean; //Define que o disable é opcional e deve ser do tipo boolean. Indica se o botão estiver desativado.
-    variant?: "primary" | "outline" | "black"; //Variant deve ser uma das três strings especificadas. Ela permite alterar a variante visual do botão.
+    variant?: "primary" | "outline" | "black" | "transparente"; //Variant deve ser uma das três strings especificadas. Ela permite alterar a variante visual do botão.
     style?: TouchableOpacityProps["style"]; //Permitindo que sejam fornecidos estilos personalizados para o TouchableOpacity, que envolve o botão.
 }
 

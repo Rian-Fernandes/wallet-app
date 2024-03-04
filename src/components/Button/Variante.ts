@@ -30,7 +30,7 @@ export interface ButtonVariant {
 const buttonPrimary: ButtonVariant = {
     enabled: {
         button: {
-            backgroundColor: theme.COLORS.PURPLE1,
+            backgroundColor: theme.COLORS.BLUESTRONG,
         },
         title: {
             color: theme.COLORS.WHITE_100,
@@ -106,9 +106,35 @@ const buttonBlack: ButtonVariant = {
     },
 };
 
+const ButtonTransparent: ButtonVariant = {
+    enabled: {
+        button: {
+            backgroundColor: "transparent",
+        },
+        title: {
+            color: theme.COLORS.GRAY2,
+        },
+        icon: {
+            color: theme.COLORS.GRAY2,
+        },
+    },
+    desabled: {
+        button: {
+            backgroundColor: "transparent",
+        },
+        title: {
+            color: theme.COLORS.GRAY2,
+        },
+        icon: {
+            color: theme.COLORS.GRAY2,
+        },
+    },
+};
+
 //Estou exportando um objeto pois ele contém todas as variações que eu necessito, é mais prático, e limpo fazer dessa maneira além de também facilitar uma futura manutenção.
 export const variants = {
     primary: buttonPrimary,
     outline: buttonOutLine,
     black: buttonBlack,
+    transparente: ButtonTransparent,
 };

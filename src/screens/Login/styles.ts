@@ -52,13 +52,27 @@ export const ButtonSignUp = styled(Pressable)`
 
 export const TitleButtonSignUp = styled.Text`
     font-size: 14px;
-    color: ${({ theme }) => theme.COLORS.GRAY4};
-    font-family: ${({ theme }) => theme.FONTS.POPPINSMEDIUM};
+    color: ${({ theme }: any) => theme.COLORS.GRAY4};
+    font-family: ${({ theme }: any) => theme.FONTS.POPPINSMEDIUM};
 `;
 
 export const TitleButtonSignup2 = styled.Text`
     font-size: 17px;
     margin-left: 2px;
-    font-family: ${({ theme }) => theme.FONTS.POPPINSBOLD};
-    color: ${({ theme }) => theme.COLORS.BLUE};
+    font-family: ${({ theme }: any) => theme.FONTS.POPPINSBOLD};
+    color: ${({ theme }: any) => theme.COLORS.BLUE};
+`;
+
+export const ContentForgotPassword = styled.View`
+    padding: 20px 0;
+    align-items: center;
+`;
+
+export const ContenButtonForgotPassword = styled(Pressable)`
+    align-items: center;
+`;
+
+export const ContenTitleForgotPassword = styled.Text`
+    font-family: ${({ theme }: any) => theme.FONTS.POPPINSLIGHT};
+    color: ${({ theme }: any) => theme.COLORS.GRAY1};
 `;

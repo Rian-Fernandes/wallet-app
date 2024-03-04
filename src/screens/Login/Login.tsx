@@ -17,6 +17,9 @@ import {
     ButtonSignUp,
     TitleButtonSignUp,
     TitleButtonSignup2,
+    ContentForgotPassword,
+    ContenButtonForgotPassword,
+    ContenTitleForgotPassword,
 } from "./styles";
 
 import { GestureHandlerRootView } from "react-native-gesture-handler";
@@ -68,6 +71,14 @@ const Login: React.FC = () => {
                             placeholder="Digite sua senha"
                             secureTextEntry
                         />
+
+                        <ContentForgotPassword>
+                            <ContenButtonForgotPassword onPress={() => {}}>
+                                <ContenTitleForgotPassword>
+                                    Esqueceu sua senha?
+                                </ContenTitleForgotPassword>
+                            </ContenButtonForgotPassword>
+                        </ContentForgotPassword>
                         <Button
                             title="Entrar"
                             variant="primary"
@@ -77,7 +88,7 @@ const Login: React.FC = () => {
                     </ContentBody>
 
                     <ContentFooter>
-                        <ButtonSignUp>
+                        <ButtonSignUp onPress={() => {}}>
                             <TitleButtonSignUp>
                                 Não tem cadastro ainda?{" "}
                             </TitleButtonSignUp>

@@ -14,6 +14,9 @@ import {
     Title,
     Description,
     ViewButton,
+    ButtonSignUp,
+    TitleButtonSignUp,
+    TitleButtonSignup2,
 } from "./styles";
 
 import { GestureHandlerRootView } from "react-native-gesture-handler";
@@ -49,7 +52,7 @@ const Login: React.FC = () => {
                             iconName="mail-outline"
                             secureTextEntry={false}
                             autoCorrect={false}
-                            iconColor={COLORS.TEXTDARK}
+                            iconColor={COLORS.GRAY4}
                             autoCapitalize="none"
                             keyboardType="email-address"
                             placeholder="Digite seu e-mail"
@@ -73,7 +76,14 @@ const Login: React.FC = () => {
                         />
                     </ContentBody>
 
-                    <ContentFooter></ContentFooter>
+                    <ContentFooter>
+                        <ButtonSignUp>
+                            <TitleButtonSignUp>
+                                Não tem cadastro ainda?{" "}
+                            </TitleButtonSignUp>
+                            <TitleButtonSignup2>Cadastre-se</TitleButtonSignup2>
+                        </ButtonSignUp>
+                    </ContentFooter>
                 </Container>
             </SafeAreaView>
         </GestureHandlerRootView>

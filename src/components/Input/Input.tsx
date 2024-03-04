@@ -32,7 +32,7 @@ const Input: React.FC<InputProps & TextInputProps> = ({
                 <MaterialIcons
                     name={iconName}
                     size={iconSize}
-                    color={iconColor || COLORS.TEXTDARK}
+                    color={iconColor || COLORS.GRAY4}
                     style={{ padding: 5 }}
                 />
             )}
@@ -49,7 +49,7 @@ const Input: React.FC<InputProps & TextInputProps> = ({
                     <Ionicons
                         name={secury ? "eye-off" : "eye"}
                         size={iconSize}
-                        color={iconColor || COLORS.GRAY2}
+                        color={iconColor || COLORS.GRAY4}
                         style={{ padding: 5, marginRight: 5 }}
                     />
                 </TouchableOpacity>

@@ -3,13 +3,14 @@ import { Pressable } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 
 export const Container = styled.TouchableOpacity`
-    width: 100%;
-    height: 50px;
+    width: ${RFValue(193)}px;
+    height: 63px;
     align-items: center;
     justify-content: center;
     margin-top: ${RFValue(15)}px;
-    background-color: ${({ theme }: any) => theme.COLORS.PURPLE1};
-    border-radius: ${RFValue(8)}px;
+    margin-left: ${RFValue(63)}px;
+    background-color: ${({ theme }: any) => theme.COLORS.PURPLENEW};
+    border-radius: ${RFValue(15)}px;
 `;
 
 export const Content = styled.View`

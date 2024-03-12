@@ -1,9 +1,11 @@
 import React from "react";
-import { StatusBar } from "expo-status-bar";
 import AppLoading from "expo-app-loading";
+import { StatusBar } from "expo-status-bar";
 import { View, Text } from "react-native";
 import { ThemeProvider } from "styled-components/native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { NavigationContainer } from "@react-navigation/native";
+import { Routes } from "./routes";
 
 import {
     useFonts,
@@ -17,11 +19,10 @@ import {
 import { DMSans_400Regular } from "@expo-google-fonts/dm-sans";
 import { DMSerifDisplay_400Regular } from "@expo-google-fonts/dm-serif-display";
 
-import COLORS from "../src/styles/theme";
+import theme from "../src/styles/theme";
+import { Login } from "./screens/Auth/Login/Login";
 
-// import { Login } from "./screens/Login/Login";
-
-const App: React.FC = () => {
+export const App: React.FC = () => {
     const [fontsLoaded] = useFonts({
         Poppins_300Light,
         Poppins_400Regular,
@@ -36,14 +37,16 @@ const App: React.FC = () => {
         return <AppLoading />;
     }
     return (
-        <GestureHandlerRootView>
-            <ThemeProvider theme={COLORS}>
-                <StatusBar
-                    style="dark"
-                    translucent
-                    backgroundColor="transparent"
-                />
-                <View>{/* <Login /> */}</View>
+        <GestureHandlerRootView style={{ flex: 1 }}>
+            <ThemeProvider theme={theme}>
+                <NavigationContainer>
+                    <StatusBar
+                        style="dark"
+                        translucent
+                        backgroundColor="transparent"
+                    />
+                    <Routes />
+                </NavigationContainer>
             </ThemeProvider>
         </GestureHandlerRootView>
     );

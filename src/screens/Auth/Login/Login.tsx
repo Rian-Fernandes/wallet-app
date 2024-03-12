@@ -1,9 +1,9 @@
 import React from "react";
 import { KeyboardAvoidingView, Platform } from "react-native";
 import { useTheme } from "styled-components";
-import Input from "../../components/Input/Input";
-import { Button } from "../../components/Button/Button";
-import { ButtonSocialGoogle } from "../../components/ButtonSocialGoogle/ButtonSocialGoogle";
+import Input from "@src/components/Input/Input";
+import { Button } from "@src/components/Button";
+import { ButtonSocialGoogle } from "@src/components/ButtonSocialGoogle/ButtonSocialGoogle";
 import { ButtonSocialFacebook } from "@src/components/ButtonSocialFacebook/ButtonSocialFacebook";
 
 import {
@@ -22,7 +22,7 @@ import {
     ContenTitleForgotPassword,
 } from "./styles";
 
-const Login: React.FC = () => {
+export const Login = () => {
     const { COLORS } = useTheme();
 
     return (
@@ -99,5 +99,3 @@ const Login: React.FC = () => {
         </KeyboardAvoidingView>
     );
 };
-
-export { Login };

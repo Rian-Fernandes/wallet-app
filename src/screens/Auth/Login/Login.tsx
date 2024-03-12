@@ -3,6 +3,7 @@ import { KeyboardAvoidingView, Platform } from "react-native";
 import { useTheme } from "styled-components";
 import Input from "@src/components/Input/Input";
 import { Button } from "@src/components/Button";
+import { useNavigation } from "@react-navigation/native";
 import { ButtonSocialGoogle } from "@src/components/ButtonSocialGoogle/ButtonSocialGoogle";
 import { ButtonSocialFacebook } from "@src/components/ButtonSocialFacebook/ButtonSocialFacebook";
 
@@ -24,6 +25,12 @@ import {
 
 export const Login = () => {
     const { COLORS } = useTheme();
+
+    const navigation = useNavigation();
+
+    const handleCadastro = () => {
+        navigation.navigate("Cadastro");
+    };
 
     return (
         <KeyboardAvoidingView
@@ -88,7 +95,7 @@ export const Login = () => {
                 </ContentBody>
 
                 <ContentFooter>
-                    <ButtonSignUp onPress={() => {}}>
+                    <ButtonSignUp onPress={handleCadastro}>
                         <TitleButtonSignUp>
                             Não tem cadastro ainda?{" "}
                         </TitleButtonSignUp>

@@ -1,5 +1,5 @@
 import React from "react";
-import { KeyboardAvoidingView, Platform } from "react-native";
+import { KeyboardAvoidingView } from "react-native";
 import { useTheme } from "styled-components";
 import Input from "@src/components/Input/Input";
 import { Button } from "@src/components/Button";
@@ -33,10 +33,7 @@ export const Login = () => {
     };
 
     return (
-        <KeyboardAvoidingView
-            behavior={Platform.OS === "ios" ? "padding" : "position"}
-            enabled
-        >
+        <KeyboardAvoidingView behavior="position" enabled>
             <Container>
                 <ContentHeader>
                     <Title>

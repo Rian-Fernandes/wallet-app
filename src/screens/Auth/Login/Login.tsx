@@ -32,6 +32,10 @@ export const Login = () => {
         navigation.navigate("Cadastro");
     };
 
+    const handleRecuperarSenha = () => {
+        navigation.navigate("RecuperarSenha");
+    };
+
     return (
         <KeyboardAvoidingView behavior="position" enabled>
             <Container>
@@ -77,7 +81,9 @@ export const Login = () => {
                     />
 
                     <ContentForgotPassword>
-                        <ContenButtonForgotPassword onPress={() => {}}>
+                        <ContenButtonForgotPassword
+                            onPress={handleRecuperarSenha}
+                        >
                             <ContenTitleForgotPassword>
                                 Esqueceu sua senha?
                             </ContenTitleForgotPassword>

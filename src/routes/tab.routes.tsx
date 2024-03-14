@@ -20,12 +20,21 @@ export const TabRoutes = () => {
             initialRouteName="Carteira"
             screenOptions={{
                 headerShown: false,
-                tabBarShowLabel: true,
-                tabBarInactiveBackgroundColor: theme.COLORS.GRAY4,
-                tabBarActiveTintColor: theme.COLORS.GRAY1,
+                tabBarShowLabel: false,
+                // tabBarInactiveBackgroundColor: theme.COLORS.GRAY4,
+                // tabBarActiveTintColor: theme.COLORS.GRAY1,
                 tabBarStyle: {
                     paddingBottom: 7,
                     backgroundColor: theme.COLORS.GRAY6,
+                    borderRadius: 30,
+                    height: 80,
+                    bottom: 50,
+                    position: "absolute",
+                    marginRight: 20,
+                    marginLeft: 20,
+                    justifyContent: "center",
+                    alignItems: "center",
+                    flex: 1,
                 },
                 tabBarLabelStyle: {
                     fontSize: 11,
@@ -37,7 +46,7 @@ export const TabRoutes = () => {
                 name="Carteira"
                 component={Carteira}
                 options={{
-                    tabBarLabel: "Home",
+                    // tabBarLabel: "Home",
                     tabBarIcon: ({ focused }) => (
                         <View
                             style={{
@@ -63,7 +72,7 @@ export const TabRoutes = () => {
                 name="Relatorio"
                 component={Relatorio}
                 options={{
-                    tabBarLabel: "Relatório",
+                    // tabBarLabel: "Relatório",
                     tabBarIcon: ({ focused }) => (
                         <View
                             style={{
@@ -89,7 +98,7 @@ export const TabRoutes = () => {
                 name="Notificacao"
                 component={Notificacao}
                 options={{
-                    tabBarLabel: "Notificação",
+                    // tabBarLabel: "Notificação",
                     tabBarIcon: ({ focused }) => (
                         <View
                             style={{
@@ -115,7 +124,7 @@ export const TabRoutes = () => {
                 name="Settings"
                 component={Settings}
                 options={{
-                    tabBarLabel: "Configuração",
+                    // tabBarLabel: "Configuração",
                     tabBarIcon: ({ focused }) => (
                         <View
                             style={{

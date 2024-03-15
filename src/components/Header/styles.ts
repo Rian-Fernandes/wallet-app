@@ -26,12 +26,12 @@ export const Avatar = styled.Image`
 
 export const AppName = styled.Text`
     font-size: 24px;
-    color: ${({ theme }) => theme.COLORS.GRAY1};
-    font-family: ${({ theme }) => theme.FONTS.POPPINSMEDIUM};
+    color: ${({ theme }: any) => theme.COLORS.GRAY1};
+    font-family: ${({ theme }: any) => theme.FONTS.POPPINSMEDIUM};
 `;
 
 export const Status = styled.Text`
     font-size: 16px;
-    color: ${({ theme }) => theme.COLORS.GRAY4};
-    font-family: ${({ theme }) => theme.FONTS.POPPINSLIGHT};
+    color: ${({ theme }: any) => theme.COLORS.GRAY4};
+    font-family: ${({ theme }: any) => theme.FONTS.POPPINSLIGHT};
 `;

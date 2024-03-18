@@ -1,111 +1,36 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { TouchableOpacity } from "react-native";
 import React from "react";
 import { Header } from "@src/components/Header/Header";
-import { User } from "phosphor-react-native";
-import { MaterialIcons } from "@expo/vector-icons";
-import { Ionicons } from "@expo/vector-icons";
 import { useTheme } from "styled-components";
-import { useNavigation } from "@react-navigation/native";
-import {
-    Container,
-    ViewProfile,
-    ProfileName,
-    ViewRight,
-    ViewIcon,
-} from "./styles";
+import { Configs } from "@src/components/Configs";
+import { MaterialIcons } from "@expo/vector-icons";
+import { Container, ViewFooter, TitleFooter, ViewIconButton } from "./styles";
 
 export const Settings = () => {
     const { COLORS } = useTheme();
-    const navigation = useNavigation();
-
-    const handleGoProfile = () => {
-        // navigation.navigate("")
-        console.warn("Clicou aqui");
-    };
 
     return (
         <>
             <Header appName="Configurações" />
             <Container>
-                <ViewProfile>
-                    <ViewIcon>
-                        <Ionicons
-                            name="person-outline"
-                            size={24}
-                            color={COLORS.BLACK}
-                        />
-                    </ViewIcon>
-                    <ViewRight>
-                        <ProfileName>Rian Fernandes</ProfileName>
-                        <TouchableOpacity onPress={handleGoProfile}>
+                <Configs name="Perfil" iconLeft typeUser />
+                <Configs name="Notificação" iconLeft typeNotification />
+                <Configs name="Minha Carteira" iconLeft typeWallet />
+                <Configs name="Configuração Login" iconLeft typeLogin />
+                <Configs name="Central de Serviços" iconLeft typeCall />
+                <ViewFooter>
+                    <TouchableOpacity>
+                        <ViewIconButton>
                             <MaterialIcons
-                                name="navigate-next"
-                                size={24}
-                                color={COLORS.BLACK}
+                                name="logout"
+                                size={36}
+                                color={COLORS.PURPLECARD}
                             />
-                        </TouchableOpacity>
-                    </ViewRight>
-                </ViewProfile>
+                        </ViewIconButton>
+                    </TouchableOpacity>
 
-                <ViewProfile>
-                    <ViewIcon>
-                        <Ionicons
-                            name="person-outline"
-                            size={24}
-                            color={COLORS.BLACK}
-                        />
-                    </ViewIcon>
-                    <ViewRight>
-                        <ProfileName>Rian Fernandes</ProfileName>
-                        <TouchableOpacity onPress={handleGoProfile}>
-                            <MaterialIcons
-                                name="navigate-next"
-                                size={24}
-                                color={COLORS.BLACK}
-                            />
-                        </TouchableOpacity>
-                    </ViewRight>
-                </ViewProfile>
-
-                <ViewProfile>
-                    <ViewIcon>
-                        <Ionicons
-                            name="person-outline"
-                            size={24}
-                            color={COLORS.BLACK}
-                        />
-                    </ViewIcon>
-                    <ViewRight>
-                        <ProfileName>Rian Fernandes</ProfileName>
-                        <TouchableOpacity onPress={handleGoProfile}>
-                            <MaterialIcons
-                                name="navigate-next"
-                                size={24}
-                                color={COLORS.BLACK}
-                            />
-                        </TouchableOpacity>
-                    </ViewRight>
-                </ViewProfile>
-
-                <ViewProfile>
-                    <ViewIcon>
-                        <Ionicons
-                            name="person-outline"
-                            size={24}
-                            color={COLORS.BLACK}
-                        />
-                    </ViewIcon>
-                    <ViewRight>
-                        <ProfileName>Rian Fernandes</ProfileName>
-                        <TouchableOpacity onPress={handleGoProfile}>
-                            <MaterialIcons
-                                name="navigate-next"
-                                size={24}
-                                color={COLORS.BLACK}
-                            />
-                        </TouchableOpacity>
-                    </ViewRight>
-                </ViewProfile>
+                    <TitleFooter>Log out</TitleFooter>
+                </ViewFooter>
             </Container>
         </>
     );

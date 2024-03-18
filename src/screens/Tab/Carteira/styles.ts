@@ -10,7 +10,17 @@ export const ViewContainer = styled.View`
     justify-content: center;
 `;
 
-export const Content = styled.View`
+export const Content = styled.View.attrs({
+    shadowColor: "purple",
+    shadowOffset: {
+        width: 0,
+        height: 10,
+    },
+    shadowOpacity: 0.53,
+    shadowRadius: 13.97,
+
+    elevation: 21,
+})`
     width: 100%;
     height: 140px;
     border-radius: 50px;

@@ -1,3 +1,4 @@
+import theme from "@src/styles/theme";
 import styled from "styled-components/native";
 
 export const Container = styled.View`
@@ -5,43 +6,23 @@ export const Container = styled.View`
     padding: 10px 15px;
 `;
 
-export const ViewProfile = styled.View`
-    flex-direction: row;
-    align-items: center;
-    padding: 5px 15px;
-    margin-top: 15px;
-`;
-
-export const ProfileName = styled.Text`
-    justify-content: space-between;
-    font-size: 18px;
-    color: ${({ theme }) => theme.COLORS.BLACK};
-    font-family: ${({ theme }) => theme.FONTS.POPPINSMEDIUM};
-`;
-
-export const ViewRight = styled.View`
-    flex: 1;
-    margin-left: 15px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-`;
-
-export const ViewIcon = styled.View.attrs({
-    shadowColor: "#000",
-    shadowOffset: {
-        width: 0,
-        height: 3,
-    },
-    shadowOpacity: 0.29,
-    shadowRadius: 4.65,
-
-    elevation: 7,
-})`
-    width: 50px;
-    height: 50px;
+export const ViewFooter = styled.View`
+    margin-top: 30px;
     align-items: center;
     justify-content: center;
-    background-color: ${({ theme }) => theme.COLORS.WHITE};
+    width: 100%;
+`;
+
+export const TitleFooter = styled.Text`
+    font-size: 17px;
+    color: ${({ theme }) => theme.COLORS.PURPLECARD};
+    font-family: ${({ theme }) => theme.FONTS.POPPINSMEDIUM};
+    margin-top: 5px;
+`;
+
+export const ViewIconButton = styled.View`
+    padding: 10px;
+    border-width: 1px;
+    border-color: ${({ theme }) => theme.COLORS.GRAY5};
     border-radius: 30px;
 `;

@@ -25,10 +25,10 @@ export const TabRoutes = () => {
                 // tabBarActiveTintColor: theme.COLORS.GRAY1,
                 tabBarStyle: {
                     paddingBottom: 7,
-                    backgroundColor: theme.COLORS.GRAY6,
+                    backgroundColor: theme.COLORS.DARKPURPLE,
                     borderRadius: 30,
-                    height: 80,
-                    bottom: 50,
+                    height: 78,
+                    bottom: 30,
                     position: "absolute",
                     marginRight: 20,
                     marginLeft: 20,

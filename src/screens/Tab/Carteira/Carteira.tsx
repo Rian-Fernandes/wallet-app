@@ -1,10 +1,11 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, FlatList } from "react-native";
 import React from "react";
 import Transfer from "@src/assets/convert.png";
 import Payments from "@src/assets/export.png";
 import Payout from "@src/assets/money-send.png";
 import TopUp from "@src/assets/add-circle.png";
 import { Header } from "@src/components/Header/Header";
+import { transaction } from "@src/utils/transaction";
 import {
     Container,
     Content,
@@ -24,6 +25,17 @@ import {
     TitlePayments,
     TitlePayOut,
     TitleTopUp,
+    Footer,
+    ContentFlat,
+    ContentFlatHeader,
+    Title,
+    ButtonVerTodos,
+    ButtonTitleVerTodos,
+    IconTransaction,
+    DetailsTransaction,
+    NameTransaction,
+    SubTitleTransaction,
+    PrieceTransaction,
 } from "./styles";
 
 export const Carteira = () => {
@@ -62,6 +74,38 @@ export const Carteira = () => {
                     </TouchableOpacity>
                 </Body>
             </ViewContainer>
+            <Footer>
+                <FlatList
+                    data={transaction}
+                    renderItem={({ item }) => (
+                        <ContentFlat>
+                            <IconTransaction source={item.icon} />
+
+                            <DetailsTransaction>
+                                <NameTransaction>{item.title}</NameTransaction>
+                                <SubTitleTransaction>
+                                    {item.subtitle}
+                                </SubTitleTransaction>
+                            </DetailsTransaction>
+
+                            <PrieceTransaction>
+                                R$ {item.price}
+                            </PrieceTransaction>
+                        </ContentFlat>
+                    )}
+                    ListHeaderComponent={
+                        <ContentFlatHeader>
+                            <Title>Minhas transações</Title>
+                            <ButtonVerTodos>
+                                <ButtonTitleVerTodos>
+                                    Ver Todos
+                                </ButtonTitleVerTodos>
+                            </ButtonVerTodos>
+                        </ContentFlatHeader>
+                    }
+                    showsVerticalScrollIndicator={false}
+                />
+            </Footer>
         </Container>
     );
 };

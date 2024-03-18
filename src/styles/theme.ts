@@ -42,6 +42,8 @@ export default {
         PURPLEDARK2: "#5B259F",
         PURPLEDARK3: "#2F1155",
         PURPLENEW: "#5B259F",
+        DARKPURPLE: "#2F1155",
+        PINKTEXT: "#8438FF",
 
         TONE: "#E6E3D6",
         AVATAR: "#E0E0E0",

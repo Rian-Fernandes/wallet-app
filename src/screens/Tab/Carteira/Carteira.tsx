@@ -41,7 +41,7 @@ import {
 export const Carteira = () => {
     return (
         <Container>
-            <Header />
+            <Header avatarRight textLeft appName="Wallet" />
             <ViewContainer>
                 <Content>
                     <ViewBalanceLeft>

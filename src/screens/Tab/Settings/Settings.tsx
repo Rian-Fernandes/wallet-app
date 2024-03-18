@@ -1,12 +1,14 @@
 import { View, Text } from "react-native";
 import React from "react";
+import { Header } from "@src/components/Header/Header";
 
 import { Container } from "./styles";
 
 export const Settings = () => {
     return (
-        <Container>
-            <Text>Settings</Text>
-        </Container>
+        <>
+            <Header appName="Configurações" />
+            <Container></Container>
+        </>
     );
 };

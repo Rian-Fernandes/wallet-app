@@ -60,7 +60,7 @@ export const TabRoutes = () => {
                                 size={24}
                                 color={
                                     focused
-                                        ? theme.COLORS.BLACK
+                                        ? theme.COLORS.GRAY3
                                         : theme.COLORS.GRAY5
                                 }
                             />
@@ -86,7 +86,7 @@ export const TabRoutes = () => {
                                 size={24}
                                 color={
                                     focused
-                                        ? theme.COLORS.BLACK
+                                        ? theme.COLORS.GRAY3
                                         : theme.COLORS.GRAY5
                                 }
                             />
@@ -112,7 +112,7 @@ export const TabRoutes = () => {
                                 size={24}
                                 color={
                                     focused
-                                        ? theme.COLORS.BLACK
+                                        ? theme.COLORS.GRAY3
                                         : theme.COLORS.GRAY5
                                 }
                             />
@@ -138,7 +138,7 @@ export const TabRoutes = () => {
                                 size={24}
                                 color={
                                     focused
-                                        ? theme.COLORS.BLACK
+                                        ? theme.COLORS.GRAY3
                                         : theme.COLORS.GRAY5
                                 }
                             />

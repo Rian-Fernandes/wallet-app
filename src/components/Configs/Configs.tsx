@@ -23,6 +23,7 @@ interface IProfile {
     typeWallet?: boolean;
     typeLogin?: boolean;
     typeCall?: boolean;
+    onPress: () => void;
 }
 
 export const Configs = ({
@@ -34,14 +35,11 @@ export const Configs = ({
     typeWallet,
     typeLogin,
     typeCall,
+    onPress,
 }: IProfile) => {
     const { COLORS } = useTheme();
     const navigation = useNavigation();
 
-    const handleGoProfile = () => {
-        // navigation.navigate("")
-        console.warn("Clicou aqui");
-    };
     return (
         <Container>
             <ViewProfile>
@@ -97,7 +95,7 @@ export const Configs = ({
 
                 <ViewRight>
                     <ProfileName>{name}</ProfileName>
-                    <TouchableOpacity onPress={handleGoProfile}>
+                    <TouchableOpacity onPress={onPress}>
                         <MaterialIcons
                             name="navigate-next"
                             size={24}

@@ -6,6 +6,7 @@ import Payout from "@src/assets/money-send.png";
 import TopUp from "@src/assets/add-circle.png";
 import { Header } from "@src/components/Header/Header";
 import { transaction } from "@src/utils/transaction";
+import { useNavigation } from "@react-navigation/native";
 import {
     Container,
     Content,
@@ -39,6 +40,8 @@ import {
 } from "./styles";
 
 export const Carteira = () => {
+    const navigation = useNavigation();
+
     return (
         <Container>
             <Header avatarRight textLeft appName="Wallet" />
@@ -68,7 +71,10 @@ export const Carteira = () => {
                         <IconPayOut source={Payout} />
                         <TitlePayOut>Payout</TitlePayOut>
                     </TouchableOpacity>
-                    <TouchableOpacity style={{ alignItems: "center" }}>
+                    <TouchableOpacity
+                        onPress={() => navigation.navigate("AddCartao")}
+                        style={{ alignItems: "center" }}
+                    >
                         <IconTopUp source={TopUp} />
                         <TitleTopUp>TopUp</TitleTopUp>
                     </TouchableOpacity>

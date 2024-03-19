@@ -44,6 +44,7 @@ export default {
         PURPLENEW: "#5B259F",
         DARKPURPLE: "#2F1155",
         PINKTEXT: "#8438FF",
+        PURPLE_TEXT: "#130138",
 
         TONE: "#E6E3D6",
         AVATAR: "#E0E0E0",

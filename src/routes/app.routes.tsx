@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
 import { Profile } from "@src/screens/App/Profile";
 import { TabRoutes } from "./tab.routes";
+import { AddCartao } from "@src/screens/App/AddCartao";
 
 const { Navigator, Screen } = createNativeStackNavigator();
 
@@ -16,6 +17,7 @@ export const AppRoutes = () => {
         >
             <Screen name="TabRoutes" component={TabRoutes} />
             <Screen name="Profile" component={Profile} />
+            <Screen name="AddCartao" component={AddCartao} />
         </Navigator>
     );
 };

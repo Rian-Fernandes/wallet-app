@@ -63,7 +63,7 @@ export const Profile = () => {
                             </ViewIconButton>
                         </TouchableOpacity>
 
-                        <TitleFooter>Log out</TitleFooter>
+                        <TitleFooter>Deletar conta</TitleFooter>
                     </ViewFooter>
                 </Footer>
             </Container>

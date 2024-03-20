@@ -112,7 +112,7 @@ const ButtonTransparent: ButtonVariant = {
             backgroundColor: "transparent",
         },
         title: {
-            color: theme.COLORS.GRAY2,
+            color: theme.COLORS.BLACK,
         },
         icon: {
             color: theme.COLORS.GRAY2,

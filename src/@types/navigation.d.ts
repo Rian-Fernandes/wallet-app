@@ -6,6 +6,7 @@ export declare global {
             RecuperarSenha: undefined;
             Profile: undefined;
             AddCartao: undefined;
+            DetailsCard: undefined;
         }
     }
 }

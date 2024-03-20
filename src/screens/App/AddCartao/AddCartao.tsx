@@ -12,10 +12,13 @@ import {
     ContentVisa,
 } from "./styles";
 import { Pressable } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 export const AddCartao = () => {
-    const handleCartao = () => {
-        console.warn("Detalhes do cartão");
+    const navigation = useNavigation();
+
+    const handleAddCartao = () => {
+        navigation.navigate("DetailsCard");
     };
 
     return (
@@ -23,7 +26,7 @@ export const AddCartao = () => {
             <GoBack />
             <Container>
                 <Title>Add Card</Title>
-                <Pressable onPress={handleCartao}>
+                <Pressable onPress={handleAddCartao}>
                     <Content source={BgPng}>
                         <ContentChip source={ChipPng} />
                         <ContentVisa source={VisaPng} />

@@ -10,6 +10,8 @@ import {
     Status,
     Validade,
     ViewDetails,
+    ViewInfo,
+    InfoTitle,
 } from "./styles";
 import { GoBack } from "@src/components/GoBack";
 import detailsCardPng from "@src/assets/carddetails.png";
@@ -23,20 +25,38 @@ export const DetailsCard = () => {
                 <Title>Details Card</Title>
                 <CardImage source={detailsCardPng} />
                 <ViewDetails>
-                    <Name>Rian</Name>
-                    <Bank>Bank</Bank>
-                    <Conta>567874</Conta>
-                    <Status>Ativo</Status>
-                    <Validade>08-2059</Validade>
+                    <ViewInfo>
+                        <InfoTitle>Nome</InfoTitle>
+                        <Name>Rian Fernandes</Name>
+                    </ViewInfo>
+                    <ViewInfo>
+                        <InfoTitle>Banco</InfoTitle>
+                        <Bank>Bank</Bank>
+                    </ViewInfo>
+                    <ViewInfo>
+                        <InfoTitle>Conta</InfoTitle>
+                        <Conta>.... .... .... 2495</Conta>
+                    </ViewInfo>
+                    <ViewInfo>
+                        <InfoTitle>Status</InfoTitle>
+                        <Status>Ativo</Status>
+                    </ViewInfo>
+                    <ViewInfo>
+                        <InfoTitle>Vencimento</InfoTitle>
+                        <Validade>2025-2059</Validade>
+                    </ViewInfo>
                 </ViewDetails>
-                <Button
-                    variant="transparente"
-                    title="Deletar"
-                    onPress={() => {}}
-                    style={{
-                        marginTop: 100,
-                    }}
-                />
+
+                {
+                    <Button
+                        variant="transparente"
+                        title="Deletar cartão"
+                        onPress={() => {}}
+                        style={{
+                            marginTop: 30,
+                        }}
+                    />
+                }
             </Container>
         </>
     );

@@ -1,7 +1,5 @@
 import theme from "@src/styles/theme";
 
-theme.COLORS; //Apenas acessando a propriedade COLORS do objeto theme.
-
 interface ButtonStyle {
     button: {
         backgroundColor: string;
@@ -112,7 +110,7 @@ const ButtonTransparent: ButtonVariant = {
             backgroundColor: "transparent",
         },
         title: {
-            color: theme.COLORS.BLACK,
+            color: theme.COLORS.PURPLECARD,
         },
         icon: {
             color: theme.COLORS.GRAY2,

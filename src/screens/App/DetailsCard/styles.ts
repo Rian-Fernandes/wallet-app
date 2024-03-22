@@ -20,12 +20,66 @@ export const CardImage = styled.Image`
 
 export const ViewDetails = styled.View`
     width: 100%;
-    background-color: tomato;
     margin-top: 30px;
     align-items: center;
 `;
-export const Name = styled.Text``;
-export const Bank = styled.Text``;
-export const Conta = styled.Text``;
-export const Status = styled.Text``;
-export const Validade = styled.Text``;
+
+export const InfoTitle = styled.Text`
+    font-size: 16px;
+    line-height: 20px;
+    color: ${({ theme }) => theme.COLORS.GRAY4};
+`;
+
+export const ViewInfo = styled.View`
+    width: 80%;
+    padding: 5px 0;
+    flex-direction: row;
+`;
+
+export const Name = styled.Text`
+    flex: 1;
+    font-size: 16px;
+    line-height: 20px;
+    margin-left: 90px;
+    text-align: center;
+    color: ${({ theme }) => theme.COLORS.GRAY1};
+    font-family: ${({ theme }) => theme.FONTS.POPPINSREGULAR};
+`;
+
+export const Bank = styled.Text`
+    flex: 1;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: ${({ theme }) => theme.COLORS.GRAY1};
+    font-family: ${({ theme }) => theme.FONTS.POPPINSREGULAR};
+`;
+
+export const Conta = styled.Text`
+    flex: 1;
+    font-size: 16px;
+    line-height: 20px;
+    margin-left: 60px;
+    text-align: center;
+    color: ${({ theme }) => theme.COLORS.GRAY1};
+    font-family: ${({ theme }) => theme.FONTS.POPPINSREGULAR};
+`;
+
+export const Status = styled.Text`
+    flex: 1;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: ${({ theme }) => theme.COLORS.GRAY1};
+    font-family: ${({ theme }) => theme.FONTS.POPPINSREGULAR};
+`;
+
+export const Validade = styled.Text`
+    flex: 1;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    margin-left: 10px;
+    color: ${({ theme }) => theme.COLORS.GRAY1};
+    font-family: ${({ theme }) => theme.FONTS.POPPINSREGULAR};
+`;

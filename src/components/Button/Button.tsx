@@ -50,7 +50,9 @@ export const Button: React.FC<IButtonProps> = ({
                             }}
                         />
                     )}
-                    <Title>{title}</Title>
+                    <Title style={{ color: buttonStyle.title.color }}>
+                        {title}
+                    </Title>
                 </Content>
             )}
         </Container>

@@ -41,6 +41,9 @@ import {
 
 export const Carteira = () => {
     const navigation = useNavigation();
+    const handleGoTransaction = () => {
+        navigation.navigate("Transaction");
+    };
 
     return (
         <Container>
@@ -103,7 +106,9 @@ export const Carteira = () => {
                         <ContentFlatHeader>
                             <Title>Minhas transações</Title>
                             <ButtonVerTodos>
-                                <ButtonTitleVerTodos>
+                                <ButtonTitleVerTodos
+                                    onPress={handleGoTransaction}
+                                >
                                     Ver Todos
                                 </ButtonTitleVerTodos>
                             </ButtonVerTodos>

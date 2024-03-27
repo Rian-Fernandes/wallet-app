@@ -2,13 +2,11 @@ import styled from "styled-components/native";
 
 export const Container = styled.View`
     flex: 1;
-    padding: 15px;
 `;
 
 export const BalanceImage = styled.ImageBackground`
     width: 100%;
     height: 215px;
-
     margin-top: -20px;
 `;
 

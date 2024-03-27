@@ -5,6 +5,7 @@ import { Profile } from "@src/screens/App/Profile";
 import { TabRoutes } from "./tab.routes";
 import { AddCartao } from "@src/screens/App/AddCartao";
 import { DetailsCard } from "@src/screens/App/DetailsCard";
+import { Transaction } from "@src/screens/App/Transaction";
 
 const { Navigator, Screen } = createNativeStackNavigator();
 
@@ -20,6 +21,7 @@ export const AppRoutes = () => {
             <Screen name="Profile" component={Profile} />
             <Screen name="AddCartao" component={AddCartao} />
             <Screen name="DetailsCard" component={DetailsCard} />
+            <Screen name="Transaction" component={Transaction} />
         </Navigator>
     );
 };
